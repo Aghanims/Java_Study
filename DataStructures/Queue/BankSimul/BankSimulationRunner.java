@@ -12,6 +12,21 @@ public class BankSimulationRunner
       Simulation sim = new BankSimulation(NTELLERS);
       sim.addEvent(new Arrival(START_TIME));
       sim.run(START_TIME, END_TIME);
+
+      /*
+         Output explanation:
+            
+            -Inside the bank, there are 5 bank teller to help costumers
+         
+         ('C' tellers that are accomodating ) < ('C' Costumers that are in a queue)
+
+            * After each customer completes their appointment, they are immediately replaced by another customer.
+            * The simulation continues until reaching the END_TIME.
+            * Finally, it displays all accommodated customers within the specified time frame and calculates the 
+               average duration of a customer's appointment.
+               
+       
+      */
    }
 }
 

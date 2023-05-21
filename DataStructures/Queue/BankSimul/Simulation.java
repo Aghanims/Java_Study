@@ -27,7 +27,7 @@ public class Simulation
    */
    public static double expdist(double mean)
    {  
-      return -mean * Math.log(1 - Math.random());
+      return -mean * Math.log(1 - Math.random()); 
    }
 
    /**
@@ -42,12 +42,12 @@ public class Simulation
    /**
       Displays intermediate results after each event.
    */
-   public void display() {}
+   public void display() {} //will be overridden by BankSimulation class
 
    /**
       Displays summary results after the end of the simulation.
    */
-   public void displaySummary() {}
+   public void displaySummary() {} //will be overridden by BankSimulation class
 
    public void run(double startTime, double endTime)
    {

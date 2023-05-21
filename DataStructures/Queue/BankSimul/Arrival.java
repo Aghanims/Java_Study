@@ -1,8 +1,7 @@
 package DataStructures.Queue.BankSimul;
 
-/** 
-    This event describes a customer arriving at a bank.
-*/
+//This event describes a customer arriving at a bank.
+    
 public class Arrival extends Event
 {
    /**

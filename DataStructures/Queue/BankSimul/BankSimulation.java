@@ -3,9 +3,9 @@ package DataStructures.Queue.BankSimul;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
-   Simulation of customer traffic in a bank.
-*/
+
+//Simulation of customer traffic in a bank.
+
 public class BankSimulation extends Simulation
 {
    private Customer[] tellers;
@@ -43,6 +43,7 @@ public class BankSimulation extends Simulation
             addedToTeller = true;
          }
       }
+      
       if (!addedToTeller) { custQueue.add(c); }
 
       addEvent(new Arrival(getCurrentTime() + expdist(INTERARRIVAL)));

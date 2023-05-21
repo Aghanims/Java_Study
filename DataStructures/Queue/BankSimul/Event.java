@@ -2,6 +2,7 @@ package DataStructures.Queue.BankSimul;
 
 public class Event implements Comparable<Event>
 {
+   //the time a costumer is done with their appointment
    private double time;
  
    public Event(double eventTime)
@@ -15,8 +16,11 @@ public class Event implements Comparable<Event>
 
    public int compareTo(Event other)
    {
-      if (time < other.time) { return -1; }
-      else if (time > other.time) { return 1; }
-      else { return 0; }
+      if (time < other.time) 
+       return -1; 
+      else if (time > other.time) 
+       return 1; 
+      else 
+       return 0; 
    }
 }
