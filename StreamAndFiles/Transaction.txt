@@ -1,0 +1,4 @@
+SKU, quantity, Price, Description
+4039,50,0.99,Soda
+9100,5,9.50,T-Shirt
+1949,30,110.00,Java Programming Textbook
