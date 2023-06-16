@@ -8,11 +8,12 @@ public class Food extends Product
 
     public Food()
     {
-        this("N/A", 0, "N/A");
+        this("N/A", 0,"N/A", 0, "N/A");
     }
 
-    public Food(String expirationDate, float calories, String servingSize)
-    {
+    public Food(String name, int price, String expirationDate, float calories, String servingSize)
+    {   
+        super(name, price);
         this.expirationDate = expirationDate;
         this.calories = calories;
         this.servingSize = servingSize;

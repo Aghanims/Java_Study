@@ -8,12 +8,12 @@ public class Apparel extends Product
 
     public Apparel()
     {
-        this("N/A", "N/A", "N/A");
+        this("N/A", 0, "N/A", "N/A", "N/A");
     }
 
-    public Apparel(String brand, String size, String type)
+    public Apparel(String name, int price, String brand, String size, String type)
     {
-        
+        super(name, price);
         this.brand = brand;
         this.size = size;
         this.type = type;

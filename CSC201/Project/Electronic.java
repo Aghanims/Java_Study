@@ -8,10 +8,11 @@ public class Electronic extends Product
 
     public Electronic()
     {
-        this("N/A", 0, "N/A");
+        this("N/A", 0, "N/A", 0, "N/A");
     }
-    public Electronic(String model, float weight, String manufacturer)
-    {
+    public Electronic(String name, int price, String model, float weight, String manufacturer)
+    {   
+        super(name, price);
         this.model = model;
         this.weight = weight; 
         this.manufacturer = manufacturer;
