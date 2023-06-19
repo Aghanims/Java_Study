@@ -157,6 +157,11 @@ public class MainGameComponent extends JPanel
         return whoWins;
     }
 
+    public void setWinner(int x)
+    {
+        whoWins = x;
+    }
+
     private void disableButtons()
     {
         for(int i = 0; i < 9; i++)

@@ -4,6 +4,6 @@ public class Tester
 {
     public static void main(String[] args) 
     {
-        TicTacToe test = new TicTacToe();
+        new TicTacToe();
     }
 }

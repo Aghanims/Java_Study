@@ -2,12 +2,16 @@ package TicTacToe_Game;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 public class TicTacToe extends JFrame implements ActionListener
 {
@@ -17,6 +21,12 @@ public class TicTacToe extends JFrame implements ActionListener
     private JPanel rightPanel = new JPanel();
     private MainGameComponent ticTacToe = new MainGameComponent();
     private int occupiedCount = 0;
+
+    //menu bars
+    JMenuBar menuBar = new JMenuBar();
+    JMenu state = new JMenu("State");
+    JMenuItem playAgain = new JMenuItem("Play Again");
+    JMenuItem exitGame = new JMenuItem("Exit");
 
 
     public TicTacToe()
@@ -34,6 +44,7 @@ public class TicTacToe extends JFrame implements ActionListener
         textfield.setFont(new Font(null, Font.BOLD, 55));
         textfield.setHorizontalAlignment(JLabel.CENTER);
         textfield.setOpaque(true);
+        textfield.setLayout(null);
         textfield.setText("Tic-Tac-Toe");
 
         //title_panel
@@ -59,6 +70,22 @@ public class TicTacToe extends JFrame implements ActionListener
         for(int i = 0; i < 9; i++)
             ticTacToe.getButton(i).addActionListener(this);  
 
+
+        //Menu bar
+        state.setMnemonic(KeyEvent.VK_S);
+
+        //menu items
+        playAgain.setMnemonic(KeyEvent.VK_P);
+        exitGame.setMnemonic(KeyEvent.VK_E);
+        
+        playAgain.addActionListener(this);
+        exitGame.addActionListener(this);
+
+        state.add(playAgain);
+        state.add(exitGame);
+        menuBar.add(state);
+
+        this.setJMenuBar(menuBar);
         title_panel.add(textfield);
         this.add(ticTacToe, BorderLayout.CENTER);
         this.add(title_panel, BorderLayout.NORTH);
@@ -72,6 +99,21 @@ public class TicTacToe extends JFrame implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e) 
     {
+        if(e.getSource() == playAgain)
+        {
+            for(int i = 0; i < 9; i++)
+            {   
+                textfield.setText("Tic-Tac-Toe");
+                ticTacToe.getButton(i).setText("");
+                ticTacToe.getButton(i).setBackground(new Color(238, 238, 238));
+                ticTacToe.getButton(i).setEnabled(true);
+                ticTacToe.setWinner(-1);
+            }
+            return;
+        }
+        else if(e.getSource() == exitGame)
+            System.exit(0);
+        
         occupiedCount++;
         //asign X and O values to clicked buttons
         for(int i = 0; i < 9; i++)
