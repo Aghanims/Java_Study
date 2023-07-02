@@ -15,9 +15,6 @@ public class QuickSort
         // and move towards each other.
         int low = startIndex;
         int high = endIndex;
-     
-      //kahsdfh
-      //ooiahdsf 
 
         boolean done = false;
         while (!done) 
