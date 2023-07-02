@@ -16,6 +16,8 @@ public class QuickSort
         int low = startIndex;
         int high = endIndex;
 
+      //Let's see if it update to other computer
+
         boolean done = false;
         while (!done) 
         {
