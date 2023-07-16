@@ -63,10 +63,10 @@ public class QuickSort
             
         // Partition the array segment
         int high = partition(numbers, startIndex, endIndex);
-  
+
         // Recursively sort the left segment
         quicksort(numbers, startIndex, high);
-  
+        
         // Recursively sort the right segment
         quicksort(numbers, high + 1, endIndex);
      }
