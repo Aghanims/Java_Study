@@ -1,3 +1,4 @@
+package GUI_Study;
 
 import java.awt.Image;
 import java.awt.event.*;

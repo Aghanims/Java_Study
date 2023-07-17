@@ -1,3 +1,5 @@
+package GUI_Study;
+
 import javax.swing.JButton;
 import javax.swing.JColorChooser;
 import javax.swing.JFrame;

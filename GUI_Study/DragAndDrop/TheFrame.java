@@ -1,4 +1,4 @@
-package DragAndDrop;
+package GUI_Study.DragAndDrop;
 
 import javax.swing.JFrame;
 

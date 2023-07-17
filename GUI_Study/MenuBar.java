@@ -1,3 +1,5 @@
+package GUI_Study;
+
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;

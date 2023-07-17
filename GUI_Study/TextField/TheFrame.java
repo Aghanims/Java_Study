@@ -1,4 +1,4 @@
-package TextField;
+package GUI_Study.TextField;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;

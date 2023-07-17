@@ -1,4 +1,4 @@
-package ComboBoxes;
+package GUI_Study.ComboBoxes;
 
 import javax.swing.BorderFactory;
 import javax.swing.JComboBox;

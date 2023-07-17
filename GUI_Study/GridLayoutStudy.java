@@ -1,3 +1,5 @@
+package GUI_Study;
+
 import java.awt.GridLayout;
 
 import javax.swing.JButton;

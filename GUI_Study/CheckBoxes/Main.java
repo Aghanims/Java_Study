@@ -1,4 +1,4 @@
-package CheckBoxes;
+package GUI_Study.CheckBoxes;
 
 public class Main 
 {

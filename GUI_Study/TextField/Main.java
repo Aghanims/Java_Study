@@ -1,4 +1,4 @@
-package TextField;
+package GUI_Study.TextField;
 
 public class Main 
 {

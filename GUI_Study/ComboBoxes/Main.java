@@ -1,4 +1,4 @@
-package ComboBoxes;
+package GUI_Study.ComboBoxes;
 
 public class Main 
 {

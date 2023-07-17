@@ -1,4 +1,4 @@
-package HowToNewWindow;
+package GUI_Study.HowToNewWindow;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

@@ -1,3 +1,5 @@
+package GUI_Study;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

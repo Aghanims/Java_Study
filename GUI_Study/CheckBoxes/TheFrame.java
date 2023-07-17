@@ -1,4 +1,4 @@
-package CheckBoxes;
+package GUI_Study.CheckBoxes;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;

@@ -1,4 +1,4 @@
-package HowToNewWindow;
+package GUI_Study.HowToNewWindow;
 
 public class MainRunner 
 {

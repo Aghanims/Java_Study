@@ -1,3 +1,4 @@
+package GUI_Study;
 
 import javax.swing.*;
 import java.awt.*;

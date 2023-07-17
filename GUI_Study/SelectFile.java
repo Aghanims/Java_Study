@@ -1,3 +1,5 @@
+package GUI_Study;
+
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;

@@ -1,4 +1,4 @@
-package HowToNewWindow;
+package GUI_Study.HowToNewWindow;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
