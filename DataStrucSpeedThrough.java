@@ -34,9 +34,5 @@ public class DataStrucSpeedThrough
         {
             System.out.format("Name: %s\n",content);
         }
-      
-
-
-        
     }
 }
