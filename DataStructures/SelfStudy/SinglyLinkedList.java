@@ -518,8 +518,5 @@ public class SinglyLinkedList
         System.out.println("Adding the two list : (2564 + 743)");
         ListNode newlyAddedList = addTwoNumbers(addA.head, addB.head);
         displayList(newlyAddedList);
-        
-
-
     }
 }

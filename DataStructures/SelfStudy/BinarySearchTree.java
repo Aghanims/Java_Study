@@ -1,5 +1,9 @@
 package DataStructures.SelfStudy;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
 public class BinarySearchTree 
 {
     private TreeNode root;
@@ -195,6 +199,118 @@ public class BinarySearchTree
         printInOrder(root.rightChild);
     }
 
+    public int ancestorsOf(TreeNode root, int nodeValue)
+    {
+        if(root == null) {return 0;}
+
+        if(root.data == nodeValue)
+            return 1;
+
+        int leftAncestor = ancestorsOf(root.leftChild, nodeValue);
+        int rightAncestor = ancestorsOf(root.rightChild, nodeValue);
+
+        if(leftAncestor == 1 || rightAncestor == 1)
+        {
+            System.out.print(root.data + " ");
+            return 1;
+        }
+
+        return 0;
+    }
+
+    public List<Integer> listAncestorsOf(TreeNode root, int nodeValue)
+    {
+        ArrayList<Integer> ancestors = new ArrayList<>();
+        utilAncestorsOf(root, nodeValue, ancestors);
+
+        return ancestors;
+    }
+
+    private boolean utilAncestorsOf(TreeNode root, int nodeValue, List<Integer> ancestors)
+    {
+        if(root == null) {return false;}
+
+        if(root.data == nodeValue) {return true;}
+
+        boolean left = utilAncestorsOf(root.leftChild, nodeValue, ancestors);
+        boolean right = utilAncestorsOf(root.rightChild, nodeValue, ancestors);
+
+        if(left || right)
+        {
+            ancestors.add(root.data);
+            return true;
+        }
+
+        return false;
+    }
+
+    public TreeNode leastCommonAncesetor(TreeNode root, int nodeA, int nodeB)
+    {
+        if(root == null) 
+            return null;
+
+        if(root.data == nodeA || root.data == nodeB) 
+            return root;
+
+        TreeNode left = leastCommonAncesetor(root.leftChild, nodeA, nodeB);
+        TreeNode right = leastCommonAncesetor(root.rightChild, nodeA, nodeB);
+
+        if(left == null)
+            return right;
+        else if(right == null)
+            return left;
+        else 
+            return root;
+        
+    }
+
+    /*
+                98
+            56      101
+        47    89  99    896
+      null
+    */
+
+    public int findDistance(TreeNode root, int nodeValue, int distance)
+    {
+        if(root == null) 
+            return -1;
+
+        if(root.data == nodeValue) 
+            return distance;
+
+        int left = findDistance(root.leftChild, nodeValue, distance + 1);
+        int right = findDistance(root.rightChild, nodeValue, distance + 1);
+
+        if(left != -1)  
+            return left;
+        else
+            return right;
+
+    }
+
+    public int findMax(TreeNode root)
+    {
+        TreeNode node = root;
+        int maxValue = Integer.MIN_VALUE;
+
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(node);
+
+        while(!stack.isEmpty())
+        {
+            TreeNode currNode = stack.pop();
+            
+            maxValue = Math.max(maxValue, currNode.data);
+
+            //only consider right child because it is a Binary Search Tree
+            if(currNode.rightChild != null)
+                stack.push(currNode.rightChild);
+        }
+
+        return maxValue;
+    }
+
     public void printPostOrder(TreeNode root)
     {
         if(root == null)
@@ -234,6 +350,19 @@ public class BinarySearchTree
         System.out.println();
         System.out.print("Print in Post-Order traversal: ");
         test.printPostOrder(test.root);
+        System.out.println();
+        System.out.print("Ancestor(s) of 78 : ");
+        test.ancestorsOf(test.root, 78);
+        System.out.println();
+        List<Integer> ancestorsList = test.listAncestorsOf(test.root, 46);
+        System.out.println("Ancestors of 46: " + ancestorsList);
+        System.out.println("LCA of 46 and 78->> " + test.leastCommonAncesetor(test.root, 46, 78).data);
+        System.out.println();
+        System.out.println("Max Value of BST: " + test.findMax(test.root));
+        System.out.println(test.findDistance(test.root, 46, 0));
+
+        
+        
     }
 
 }

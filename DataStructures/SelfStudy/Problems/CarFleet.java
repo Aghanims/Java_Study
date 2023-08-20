@@ -33,6 +33,8 @@ public class CarFleet
         The cars starting at 5 (speed 1) and 3 (speed 3) become a fleet, meeting each other at 6. 
         The fleet moves at speed 1 until it reaches target.
         Note that no other cars meet these fleets before the destination, so the answer is 3.
+
+        [10 8][0][5 3]
 */
 private static class Elements
 {
@@ -58,7 +60,8 @@ public static int carFleet(int target, int[] position, int[] speed)
         combine[i] = new Elements(position[i], speed[i]);
 
     //sort array in ascending order base on position
-    Arrays.sort(combine, Comparator.comparingInt(element -> element.position));
+    Arrays.sort(combine, (x, y) -> x.position - y.position);
+    //Comparator.comparingInt(element -> element.position
 
     for(int i = position.length - 1; i >= 0; i--)
     {

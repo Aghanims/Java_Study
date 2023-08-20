@@ -17,6 +17,28 @@ public class BestTimeToBuyAndSellStock
             Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
             Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
     */
+
+    // public static int maxProfit(int[] prices)
+    // {
+    //     int maxPrice = 0;
+
+    //     for(int i = 0; i < prices.length; i++)
+    //     {
+    //         int start = i;
+    //         int iterator = start + 1;
+    //         for(int j = iterator; j < prices.length; j++)
+    //         {
+    //             if(prices[j] > prices[start])
+    //             {
+    //                 maxPrice = Math.max(maxPrice, prices[j] - prices[start]);
+    //                 System.out.println(prices[j] + " - " + prices[start]);
+    //             }
+    //         }
+    //     }
+
+    //     return maxPrice;
+    // }
+
     public static int maxProfit(int[] prices)
     {
         int start = 0;
@@ -29,6 +51,7 @@ public class BestTimeToBuyAndSellStock
             if(prices[start] < prices[end])
             {
                 maxPrice = Math.max(maxPrice, prices[end] - prices[start]);
+                // System.out.println(prices[end] + " - " + prices[start]);
                 end++;
             }
             else

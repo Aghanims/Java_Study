@@ -15,7 +15,7 @@ public class ARandomMain
 
             Algo:
                 Step1 - record the element's frequency in the array in using HashMap
-                Step2 - store all of the elements in the PriorityQueue in ascending order (use comparator)
+                Step2 - store all of the elements in the PriorityQueue in descending order (use comparator)
                 Step3 - store all of the top K elements in the result array 
         */
 
