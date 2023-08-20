@@ -84,6 +84,5 @@ public static int carFleet(int target, int[] position, int[] speed)
 
         int result = carFleet(12, position, speed);
         System.out.println("Number of carfleet(s): " + result);
-
     }    
 }
