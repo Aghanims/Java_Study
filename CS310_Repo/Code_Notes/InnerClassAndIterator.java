@@ -5,27 +5,21 @@ public class InnerClassAndIterator
 
     public Iterator iterator()
     {
-        return new LocalIterator(this);
+        return new LocalIterator();
     }
 
-    private static class LocalIterator implements Iterator
+    private class LocalIterator implements Iterator
     {
         private int length = 0;
-        private InnerClassAndIterator container;
-
-        public LocalIterator(InnerClassAndIterator container)
-        {
-            this.container = container;
-        }
 
         public boolean hasNext()
         {
-            return length < container.size;
+            return length < size;
         }
 
         public Object next()
         {
-            return container.items[length++];
+            return items[length++];
         }
     }
 
@@ -33,11 +27,5 @@ public class InnerClassAndIterator
     {
         boolean hasNext();
         Object next();
-    }
-
-//********************************************************************************** */
-    public static void main(String[] args)
-    {
-
     }
 }
