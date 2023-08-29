@@ -1,3 +1,4 @@
+package CS310_Repo.Proj1;
 // TO DO: add your implementation and JavaDocs.
 
 import java.util.Random;

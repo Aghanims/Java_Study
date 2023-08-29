@@ -1,3 +1,5 @@
+package CS310_Repo.Proj1;
+
 // TO DO: add your implementation and JavaDoc
 public class DynArr310<T> 
 {
@@ -81,26 +83,29 @@ public class DynArr310<T>
 	 */
 	public T set(int index, T value) 
 	{
-		// Replace the item at the given index to be the given value.
-		// Return the old item at that index.
-		// Note: You cannot add new items (i.e. cannot increase size) with this method.
-		
 		// O(1)
 		
 		// - Throw IndexOutOfBoundsException if index is not valid
 		// - Use this code to produce the correct error message for
 		// the exception (do not use a different message):
 		//	  "Index: " + index + " out of bounds!"
-		
+		if(index < 0 || index > storage.length)
+			throw new IndexOutOfBoundsException("Index: " + index + " out of bounds!");
+
 		// - Throw IllegalArgumentException if value is null. 
 		// - Use this _exact_ error message for the exception 
 		//  (quotes are not part of the message):
 		//    "Null values not accepted!"
+		if(value == null)
+			throw new IllegalArgumentException("Null values not accepted!");
 
-		
-		return null; //default return, remove/change as needed
+		// Replace the item at the given index to be the given value.
+		// Note: You cannot add new items (i.e. cannot increase size) with this method.
+		T oldValue = storage[index];
+		storage[index] = value;
 
-		
+		// Return the old item at that index.
+		return oldValue;
 	}
 
 	/**
