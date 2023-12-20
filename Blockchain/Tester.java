@@ -9,7 +9,7 @@ public class Tester
     {
         if(args.length != 2)
         {
-            System.err.println("Usage: java P3 <filename> <cumulative fee threshold>");
+            System.err.println("Usage: java Tester <filename> <cumulative fee threshold>");
             return;
         }
 
