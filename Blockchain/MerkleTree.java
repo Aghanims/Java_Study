@@ -317,7 +317,7 @@ public class MerkleTree
      * @param dummyValues is the list of dummy number that is used for creating the binary tree.
      * @param start is left boundary to be used for determining the left subtree.
      * @param end is the right boundary to used for identifying the right subtree.
-     * @return A node of the tree.
+     * @return The root node of the tree.
      */
     private Node<String> buildATree(SinglyLinkedList<Integer> dummyValues, int start, int end)
     {
